@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohan</title>
+</head>
+<body>
+    <div id="comment-box">
+
+    </div>
+    <div>
+        <textarea id="write-text" cols="50" rows="5"></textarea><br>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function(){
+
+            //get value
+            const commentArea = document.getElementById('write-text');
+            const newComment = document.createElement('p');
+            newComment.innerText = commentArea.value;
+            const commentBox = document.getElementById('comment-box');
+            commentBox.appendChild(newComment);
+            commentArea.value = '';
+        })
+    </script>
+</body>
+</html>

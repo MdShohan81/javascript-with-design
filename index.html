@@ -8,6 +8,30 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <h1 id="head"> consectetur adipisicing elit. Enim, nam!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi dolorum tenetur cupiditate velit sit officia atque voluptatum sunt vel, impedit quod hic quam laboriosam fugiat consequuntur explicabo non odio?</p>
+    <button id="submit-btn">Submit 1</button>
+    <button onclick="blue()">Submit 2</button> -->
+        <p id="paragrap-text"></p>
+        <button onclick="paragrapTextShow()">Show Paragrap text</button>
+        <button id="direct-handle-event">Show Paragrap text</button>
+
+
+
+ 
+        <script>
+          function paragrapTextShow(){
+              const paragrapText = document.getElementById('paragrap-text');
+                paragrapText.innerText = 'when click show Paragrap text button I will be show there understand';
+          }
+            
+            // Direct Event handle
+            document.getElementById('direct-handle-event').addEventListener('click', function(){
+                const paragrapText = document.getElementById('paragrap-text');
+                paragrapText.innerText = "it's show me direct add event listener";
+            })
+        </script>
     
+    <script src="main.js"></script>
 </body>
 </html>
